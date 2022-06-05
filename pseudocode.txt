@@ -1,0 +1,4 @@
+Round one starts - promt the user
+The user will input rock, paper or scissors (case insensitive)
+The computer must randomly return either rock, paper or scissors
+Return a string that declares the winner of the round 
