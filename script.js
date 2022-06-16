@@ -1,5 +1,10 @@
+let userScore = parseInt(0);
+let computerScore = parseInt(0);
+
+
 //player choice
-let userSelection = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
+let userSelection = document.getElementsByClassName('button').addEVentListener('click')
+//let userSelection = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
 
 //computer choice
 function computerPlay() {
@@ -12,10 +17,6 @@ function computerPlay() {
         return "scissors";
     }
 }
-
-let userScore = parseInt(0);
-let computerScore = parseInt(0);
-
 //finding out who won (in one round)
 function declareWin (userSelection, computerSelection) {
 
@@ -53,13 +54,14 @@ function declareWin (userSelection, computerSelection) {
     }
 }
 
-//play 5 rounds and print the result of the each round
-    for (let i = 0; i < 5; i++) { 
-    let userSelection = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
-    const computerSelection = computerPlay()
-    console.log(userSelection);
-    console.log(computerSelection);
-    console.log(declareWin(userSelection, computerSelection))
-    console.log("Your score = " + userScore);
-    console.log("Computer score = " + computerScore);
-}
+//play 5 rounds and print the result of the each round:
+
+// for (let i = 0; i < 5; i++) { 
+//     let userSelection = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
+//     const computerSelection = computerPlay()
+//     console.log(userSelection);
+//     console.log(computerSelection);
+//     console.log(declareWin(userSelection, computerSelection))
+//     console.log("Your score = " + userScore);
+//     console.log("Computer score = " + computerScore);
+// }

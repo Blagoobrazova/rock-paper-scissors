@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="./script.js"></script>
+    <script type="game/javascript" src="./script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
     <title>"Rock paper scissors" project</title>
 </head>
-<body>
-    
+<body>  
+        <div id ="startContainer">
+            <h2 id="start" style="font-size: 30px">Hey, you!</h2>
+            <button id="startbtn">Um... hello?</button>
+        </div>
+        <h2 id ="intro"></h2>
+        <button class="ynbutton" id="acceptGame" style="display:none">Yes</button>
+        <button class="ynbutton" id="refusePlaying" style="display:none">No</button>
+<!--if the user refuses-->
+    <div class="refusedContainer">
+        <h2 id="refused" style="display:none"> 
+            No?.. Oh, well, alright... 
+            I'll be here in case you change your mind.
+        </h2>
+    </div>
+
+    <p id="title" style="display:none">Pick your weapon:</p>
+    <div id="choiceContainer" style="display:none">
+            <button class="wbutton" id="rock">Rock</button>
+            <button class="wbutton" id="paper">Paper</button>
+            <button class="wbutton" id="scissors">Scissors</button>
+    </div>
+<!--Scores-->
+    <div id="resultsContainer" style="display:none">
+        <div class="players">
+            <div class="player">user</div>
+            <div class="playerScore">0</div>
+         </div>
+         <div class="players">
+             <div class="computer">computer</div>
+            <div class="computerScore">0</div>
+        </div>
+    </div>
+    <div id="rules" style="display:none">*first to 5 wins</div>
 </body>
+    <script src="./responsiveDesign.js"></script>
 </html>

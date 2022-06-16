@@ -1,0 +1,87 @@
+body,
+.wbutton,
+.ynbutton,
+#startbtn {
+    border: none;
+    font-family: 'VT323', 'Times New Roman', Times, serif;
+    background: black;
+    color: rgb(19, 164, 19)
+}
+
+#intro {
+    font-size: 30px;
+}
+
+#startbtn {
+    font-size: 25px;
+    animation: blink-animation 1.2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.2s steps(5, start) infinite;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 50px;
+}
+  
+#choiceContainer {
+    display: flex;
+    justify-content: center; 
+    gap: 53px;
+}
+  
+.wbutton {
+    font-size: 40px;
+    max-width: 200px;
+}
+
+.ynbutton {
+    font-size: 30px;
+}
+
+.ynbutton:hover,
+.wbutton:hover {
+    animation: blink-animation 0.8s steps(5, start) infinite;
+    -webkit-animation: blink-animation 0.8s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+
+/*scores*/
+
+#resultsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 100px;
+}
+  
+.players {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    gap: 10px;
+}
+
+#rules {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#rules,
+.players {
+    color: rgb(25, 133, 25)
+}

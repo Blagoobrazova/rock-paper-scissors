@@ -2,3 +2,14 @@ Round one starts - promt the user
 The user will input rock, paper or scissors (case insensitive)
 The computer must randomly return either rock, paper or scissors
 Return a string that declares the winner of the round 
+
+UI:
+
+Text appears, player clicks a button and triggers typewriter effect for the next lines.
+If user refuses to play, type out another line and delete the option to refuse.
+When user accepts the offer, show what he/she could pick and scores
+If rock button was clicked, player choice = rock,
+If paper button was clicked, player choice = paper,
+if scissors button was clicked, player choice = scissors
+When user loses/wins, show "You lost/You won", depending on the outcome, with an according image. Ask if he/she wants to play again
+New game starts from the choice between rock, paper and scissors - no itro!
