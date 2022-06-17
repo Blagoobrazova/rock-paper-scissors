@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="game/javascript" src="./script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -49,13 +48,15 @@
     <div id="rules" style="display:none">*first to 5 wins</div>
 
 <!--Reload screen-->
-    <h1 class="restart" id="restartTitle" style="font-size: 100px">You won!</h1>
-    <h2 class="restart" id="restartTitle" style="font-size: 50px">you will regret this</h2>
-    <div class="restart" id="winScreen">
-        <img src="./images/sadPC.jpg" class="restart" id="sadPC">
-        <button class="restart" id="reloadbtn" style="font-size: 50px">play again</button>
-        <img src="./images/happyPC.jpg" class="restart" id="happyPC" style="display:none">
+    <div id="reloadScreen" style="display:none">
+        <h1 class="restart" id="restartTitle" style="font-size: 100px">You won!</h1>
+        <h2 class="restart" id="restartTitle" style="font-size: 50px">you will regret this</h2>
+             <div class="restart" id="declareWinner">
+                 <img src="./images/sadPC.jpg" class="restart" id="sadPC">
+                 <button class="restart" id="reloadbtn" style="font-size: 50px">play again</button>
+                 <img src="./images/happyPC.jpg" class="restart" id="happyPC" style="display:none">
+            </div>
     </div>
 </body>
-    <script src="./responsiveDesign.js"></script>
+    <script src="./script.js"></script>
 </html>
