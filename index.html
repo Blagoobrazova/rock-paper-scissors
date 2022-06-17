@@ -34,6 +34,7 @@
             <button class="wbutton" id="paper">Paper</button>
             <button class="wbutton" id="scissors">Scissors</button>
     </div>
+
 <!--Scores-->
     <div id="resultsContainer" style="display:none">
         <div class="players">
@@ -46,12 +47,15 @@
         </div>
     </div>
     <div id="rules" style="display:none">*first to 5 wins</div>
+
 <!--Reload screen-->
     <h1 class="restart" id="restartTitle" style="font-size: 100px">You won!</h1>
-    <h2 class="restart" id="restartTitle" style="font-size: 50px">thank you for playing</h2>
-     <img src="./images/sadPC.jpg" class="image" id="sadPC">
-    <!--<img class="restart" src="./images/happyPC.jpg" id="happyPC"> -->
-    <button class="restart" id="reloadBtn" style="font-size: 50px">try again</button>
+    <h2 class="restart" id="restartTitle" style="font-size: 50px">you will regret this</h2>
+    <div class="restart" id="winScreen">
+        <img src="./images/sadPC.jpg" class="restart" id="sadPC">
+        <button class="restart" id="reloadbtn" style="font-size: 50px">play again</button>
+        <img src="./images/happyPC.jpg" class="restart" id="happyPC" style="display:none">
+    </div>
 </body>
     <script src="./responsiveDesign.js"></script>
 </html>

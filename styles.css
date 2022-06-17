@@ -13,7 +13,8 @@ body,
     font-size: 30px;
 }
 
-#startbtn {
+#startbtn,
+#reloadbtn {
     font-size: 25px;
     animation: blink-animation 1.2s steps(5, start) infinite;
     -webkit-animation: blink-animation 1.2s steps(5, start) infinite;
@@ -88,10 +89,10 @@ body,
     color: rgb(25, 133, 25)
 }
 
-.restart,
-#reloadBtn {
+.restart {
     display: flex;
-    justify-content: center;
-    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
     margin: 0;
 }
