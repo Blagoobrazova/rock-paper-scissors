@@ -49,36 +49,56 @@ yesbtn.addEventListener('click', function handleClick() {
 });
 
 //GAME
-
-let userScore = parseInt(0);
-let computerScore = parseInt(0);
-
-//player choice
 const options = document.querySelectorAll(".wbutton");
+let userScore = 0;
+let computerScore = 0;
+
+//choices
 options.forEach((option) => {
-  option.addEventListener("click", function () {
-  const userSelection = this.textContent;
+    option.addEventListener("click", function () {
+    const userSelection = this.textContent;
+
+    const cOptions = ["Rock", "Paper", "Scissors"];
+    const computerSelection = cOptions[Math.floor(Math.random() * 3)];
+
+    compare(userSelection, computerSelection);
+    updateScore();
+    if (declareWin()) {
+        userScore = computerScore = 0;
+        updateScore();
+    }
   });
 });
 
-//computer choice
-const cOptions = ["Rock", "Paper", "Scissors"];
-const computerSelection = cOptions[Math.floor(Math.random() * 3)];
-
-//finding out who won (in one round)
-function declareWin (userSelection, computerSelection) {
-
+//finding out who won
+function compare(userSelection, computerSelection) {
     if (userSelection == computerSelection) {
         return "It's a tie!";
-    } else if (userSelection === "rock" && computerSelection === "paper" ||
-        userSelection === "paper" && computerSelection === "scissors" ||
-        userSelection === "scissors" && computerSelection === "rock") {
+    } else if (userSelection === "Rock" && computerSelection === "Paper" ||
+        userSelection === "Paper" && computerSelection === "Scissors" ||
+        userSelection === "Scissors" && computerSelection === "Rock") {
         computerScore++;
-        return "You lose!";
     } else {
         userScore++;
     }
 }
+
+function updateScore() {
+    document.getElementById("userScore").textContent = userScore;
+    document.getElementById("computerScore").textContent = computerScore;
+  }
+
+function declareWin() {
+    if (userScore === 5 || computerScore === 5) {
+      const winner =
+        userScore === 5
+          ? "You win the game! Congratulations!"
+          : "Computer wins the game! Try again next time!";
+      alert(winner);
+      return true;
+    }
+    return false;
+  }
 
 //play 5 rounds and print the result of the each round:
 
