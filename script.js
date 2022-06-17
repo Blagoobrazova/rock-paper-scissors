@@ -10,6 +10,7 @@ let weapons = document.getElementById("choiceContainer");
 let results = document.getElementById("resultsContainer");
 let rules = document.getElementById("rules");
 
+//intro
 function typeWriter(text,speed,char) {
     if(char < text.length){
     intro.innerHTML += text.charAt(char);
@@ -29,14 +30,14 @@ startbtn.addEventListener('click', function handleClick() {
     setTimeout(showYesNoBtns, 10000);
 });
 
-//if the user refuses to play
+//if user refuses to play
 nobtn.addEventListener('click', function handleClick() {
     nobtn.style.display = "none";
     yesbtn.innerHTML = "Fine, let's play";
     typeWriter(" No?.. Oh, well, alright... I'll be here in case you change your mind.", 75,0);
 });
 
-//if the user accepts the game
+//if user accepts the game
 yesbtn.addEventListener('click', function handleClick() {
     nobtn.style.display = "none";
     yesbtn.style.display = "none";
@@ -45,7 +46,6 @@ yesbtn.addEventListener('click', function handleClick() {
     weapons.style.display = "flex";
     results.style.display = "flex";
     rules.style.display = "flex";
-
 });
 
 //GAME
@@ -53,57 +53,30 @@ yesbtn.addEventListener('click', function handleClick() {
 let userScore = parseInt(0);
 let computerScore = parseInt(0);
 
-
-
 //player choice
-let userSelection = document.getElementsByClassName('wbutton').addEVentListener('click')
-//let userSelection = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
+const options = document.querySelectorAll(".wbutton");
+options.forEach((option) => {
+  option.addEventListener("click", function () {
+  const userSelection = this.textContent;
+  });
+});
 
 //computer choice
-function computerPlay() {
-    let random = Math.ceil(Math.random() *3);
-    if (random < 1) {
-        return "paper";
-    } else if (1 <= random <= 2) {
-        return "rock";
-    } else {
-        return "scissors";
-    }
-}
+const cOptions = ["Rock", "Paper", "Scissors"];
+const computerSelection = cOptions[Math.floor(Math.random() * 3)];
+
 //finding out who won (in one round)
 function declareWin (userSelection, computerSelection) {
 
-    //check for a tie
     if (userSelection == computerSelection) {
         return "It's a tie!";
-    }
-
-    //scenarios in which the user loses
-    if (userSelection === "rock" && computerSelection === "paper") {
+    } else if (userSelection === "rock" && computerSelection === "paper" ||
+        userSelection === "paper" && computerSelection === "scissors" ||
+        userSelection === "scissors" && computerSelection === "rock") {
         computerScore++;
-        return "You lose! Paper beats rock";
-    }
-    if (userSelection === "paper" && computerSelection === "scissors") {
-        computerScore++;
-        return "You lose! Scissors beat paper";
-    }
-    else if (userSelection === "scissors" && computerSelection === "rock") {
-        computerScore++;
-        return "You lose! Rock beats scissors";
-    }
-
-    //scenarios in which the user wins
-    if (userSelection === "rock" && computerSelection === "scissors") {
+        return "You lose!";
+    } else {
         userScore++;
-        return "You win! Rock beats scissors";
-    }
-    if (userSelection === "scissors" && computerSelection === "paper") {
-        userScore++;
-        return "You win! Scissors beat paper";
-    }
-    else if (userSelection === "paper" && computerSelection === "rock") {
-        userScore++;
-        return "You win! Paper beats rock";
     }
 }
 
