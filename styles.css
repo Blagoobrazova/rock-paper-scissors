@@ -1,6 +1,7 @@
 body,
 .wbutton,
 .ynbutton,
+.restart,
 #startbtn {
     border: none;
     font-family: 'VT323', 'Times New Roman', Times, serif;
@@ -79,9 +80,18 @@ body,
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    font-size: 20px;
 }
 
 #rules,
 .players {
     color: rgb(25, 133, 25)
+}
+
+.restart,
+#reloadBtn {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }

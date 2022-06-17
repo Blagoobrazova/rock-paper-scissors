@@ -2,8 +2,9 @@ let userScore = parseInt(0);
 let computerScore = parseInt(0);
 
 
+
 //player choice
-let userSelection = document.getElementsByClassName('button').addEVentListener('click')
+let userSelection = document.getElementsByClassName('wbutton').addEVentListener('click')
 //let userSelection = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
 
 //computer choice
