@@ -71,7 +71,7 @@ options.forEach((option) => {
 });
 
 function showComputerSelection (computerSelection) {
-    document.getElementById("PCweapon").textContent = computerSelection;
+    document.getElementById("compWeapon").textContent = computerSelection;
 }
 
 //finding out who won
