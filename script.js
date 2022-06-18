@@ -64,7 +64,9 @@ options.forEach((option) => {
     compare(userSelection, computerSelection); //play
     showComputerSelection (computerSelection);
     updateScore();
-    if (declareWin() === true) {
+    if (declareWin()) {
+        document.getElementById("compWeapon").textContent = " ";
+        userScore = computerScore = 0;
         updateScore();
     }
   });
