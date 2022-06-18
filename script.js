@@ -64,8 +64,7 @@ options.forEach((option) => {
 
     compare(userSelection, computerSelection); //play
     updateScore();
-    if (declareWin()) {
-        userScore = computerScore = 0;
+    if (declareWin() === true) {
         updateScore();
     }
   });
@@ -99,6 +98,7 @@ let winnerTitle = document.getElementById("winnerTitle");
 let reloadbtn = document.getElementById("reloadbtn");
 
 reloadbtn.addEventListener('click', function handleClick() {
+    userScore = computerScore = 0;
     title.style.display = "flex";
     weapons.style.display = "flex";
     results.style.display = "flex";
@@ -122,22 +122,10 @@ function declareWin() {
         reloadScreen.style.display = "inline"
         computerComment.innerHTML = "thank you for playing!"
         winnerTitle.innerHTML = "You lost!"
-        sadPCstyle.display = "none";
+        sadPCimg.style.display = "none";
         happyPCimg.style.display = "inline";
         return true;
+    } else {
+        return false;
     }
-    return false;
 }
-
-
-
-/*     if (userScore === 5 || computerScore === 5) {
-      const winner =
-        userScore === 5
-          ? "You win the game! Congratulations!"
-          : "Computer wins the game! Try again next time!";
-      alert(winner);
-      return true;
-    }
-    return false;
-} */
