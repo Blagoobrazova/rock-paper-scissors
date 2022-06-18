@@ -15,6 +15,7 @@ body,
 
 #startbtn,
 #reloadbtn {
+    cursor: pointer;
     font-size: 25px;
     animation: blink-animation 1.2s steps(5, start) infinite;
     -webkit-animation: blink-animation 1.2s steps(5, start) infinite;
@@ -35,11 +36,13 @@ body,
 }
   
 .wbutton {
+    cursor: pointer;
     font-size: 40px;
     max-width: 200px;
 }
 
 .ynbutton {
+    cursor: pointer;
     font-size: 30px;
 }
 
