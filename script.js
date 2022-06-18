@@ -48,7 +48,8 @@ yesbtn.addEventListener('click', function handleClick() {
     rules.style.display = "flex";
 });
 
-//GAME
+//--------GAME----------
+
 const options = document.querySelectorAll(".wbutton");
 let userScore = 0;
 let computerScore = 0;
@@ -61,7 +62,7 @@ options.forEach((option) => {
     const cOptions = ["Rock", "Paper", "Scissors"];
     const computerSelection = cOptions[Math.floor(Math.random() * 3)];
 
-    compare(userSelection, computerSelection);
+    compare(userSelection, computerSelection); //play
     updateScore();
     if (declareWin()) {
         userScore = computerScore = 0;
@@ -86,10 +87,51 @@ function compare(userSelection, computerSelection) {
 function updateScore() {
     document.getElementById("userScore").textContent = userScore;
     document.getElementById("computerScore").textContent = computerScore;
-  }
+}
+
+//declare winner after 5 wins and change to restart screen
+
+let reloadScreen = document.getElementById("reloadScreen");
+let computerComment = document.getElementById("computerComment");
+let happyPCimg = document.getElementById("happyPC");
+let sadPCimg = document.getElementById("sadPC");
+let winnerTitle = document.getElementById("winnerTitle");
+let reloadbtn = document.getElementById("reloadbtn");
+
+reloadbtn.addEventListener('click', function handleClick() {
+    title.style.display = "flex";
+    weapons.style.display = "flex";
+    results.style.display = "flex";
+    rules.style.display = "flex";
+    reloadScreen.style.display = "none"
+});
 
 function declareWin() {
-    if (userScore === 5 || computerScore === 5) {
+    if (userScore === 5) {
+        title.style.display = "none";
+        weapons.style.display = "none";
+        results.style.display = "none";
+        rules.style.display = "none";
+        reloadScreen.style.display = "inline"
+        return true;
+    } else if (computerScore === 5) {
+        title.style.display = "none";
+        weapons.style.display = "none";
+        results.style.display = "none";
+        rules.style.display = "none";
+        reloadScreen.style.display = "inline"
+        computerComment.innerHTML = "thank you for playing!"
+        winnerTitle.innerHTML = "You lost!"
+        sadPCstyle.display = "none";
+        happyPCimg.style.display = "inline";
+        return true;
+    }
+    return false;
+}
+
+
+
+/*     if (userScore === 5 || computerScore === 5) {
       const winner =
         userScore === 5
           ? "You win the game! Congratulations!"
@@ -98,16 +140,4 @@ function declareWin() {
       return true;
     }
     return false;
-  }
-
-//play 5 rounds and print the result of the each round:
-
-// for (let i = 0; i < 5; i++) { 
-//     let userSelection = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
-//     const computerSelection = computerPlay()
-//     console.log(userSelection);
-//     console.log(computerSelection);
-//     console.log(declareWin(userSelection, computerSelection))
-//     console.log("Your score = " + userScore);
-//     console.log("Computer score = " + computerScore);
-// }
+} */
