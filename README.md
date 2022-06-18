@@ -32,10 +32,10 @@ Blinking effect for the buttons (constant blink in some cases, in others after h
 
 ### Screenshots
 
-![intro](/Users/polina/repos/rock-paper-scissors/images/intro.png)  
-![userRefuses](/Users/polina/repos/rock-paper-scissors/images/userRefused.png)  
-![userLost]/Users/polina/repos/rock-paper-scissors/images/userlose.png)  
-![userWon]/Users/polina/repos/rock-paper-scissors/images/userwin.png)  
+![intro](./images/intro.png)  
+![userRefuses](./images/userRefused.png)  
+![userLost](./images/userlose.png)  
+![userWon](./images/userwin.png)  
 
 
 ### Links
