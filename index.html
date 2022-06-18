@@ -27,15 +27,18 @@
         </h2>
     </div>
 
-    <p id="title" style="display:none">Pick your weapon:</p>
-    <div id="choiceContainer" style="display:none">
+<!--Game-->
+<div id="playScreen" style="display:none">
+    <p id="title">Pick your weapon:</p>
+    <div id="choiceContainer">
             <button class="wbutton">Rock</button>
             <button class="wbutton">Paper</button>
             <button class="wbutton">Scissors</button>
     </div>
-
+    <div class = "computerSelection" id = "compWeaponTitle">Computer's selection:</div>
+    <div class = "computerSelection" id ="compWeapon"></div>
 <!--Scores-->
-    <div id="resultsContainer" style="display:none">
+    <div id="resultsContainer">
         <div class="players">
             <div>user</div>
             <span id="userScore">0</span>
@@ -45,7 +48,8 @@
             <span id="computerScore">0</span>
         </div>
     </div>
-    <div id="rules" style="display:none">*first to 5 wins</div>
+    <div id="rules">*first to 5 wins</div>
+</div>
 
 <!--Reload screen-->
     <div id="reloadScreen" style="display:none">

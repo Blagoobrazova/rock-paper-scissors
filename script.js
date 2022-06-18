@@ -5,6 +5,7 @@ let startContainer = document.getElementById("startContainer");
 let intro = document.getElementById("intro");
 let nobtn = document.getElementById("refusePlaying");
 let yesbtn = document.getElementById("acceptGame");
+let playScreen = document.getElementById("playScreen");
 let title = document.getElementById("title");
 let weapons = document.getElementById("choiceContainer");
 let results = document.getElementById("resultsContainer");
@@ -42,14 +43,12 @@ yesbtn.addEventListener('click', function handleClick() {
     nobtn.style.display = "none";
     yesbtn.style.display = "none";
     intro.style.display = "none";
-    title.style.display = "flex";
-    weapons.style.display = "flex";
-    results.style.display = "flex";
-    rules.style.display = "flex";
+    playScreen.style.display = "inline";
 });
 
 //--------GAME----------
 
+let computerSelectionTitle = document.getElementById("compWeaponTitle");
 const options = document.querySelectorAll(".wbutton");
 let userScore = 0;
 let computerScore = 0;
@@ -63,12 +62,17 @@ options.forEach((option) => {
     const computerSelection = cOptions[Math.floor(Math.random() * 3)];
 
     compare(userSelection, computerSelection); //play
+    showComputerSelection (computerSelection);
     updateScore();
     if (declareWin() === true) {
         updateScore();
     }
   });
 });
+
+function showComputerSelection (computerSelection) {
+    document.getElementById("PCweapon").textContent = computerSelection;
+}
 
 //finding out who won
 function compare(userSelection, computerSelection) {
@@ -89,7 +93,6 @@ function updateScore() {
 }
 
 //declare winner after 5 wins and change to restart screen
-
 let reloadScreen = document.getElementById("reloadScreen");
 let computerComment = document.getElementById("computerComment");
 let happyPCimg = document.getElementById("happyPC");
@@ -99,26 +102,17 @@ let reloadbtn = document.getElementById("reloadbtn");
 
 reloadbtn.addEventListener('click', function handleClick() {
     userScore = computerScore = 0;
-    title.style.display = "flex";
-    weapons.style.display = "flex";
-    results.style.display = "flex";
-    rules.style.display = "flex";
-    reloadScreen.style.display = "none"
+    playScreen.style.display = "inline";
+    reloadScreen.style.display = "none";
 });
 
 function declareWin() {
     if (userScore === 5) {
-        title.style.display = "none";
-        weapons.style.display = "none";
-        results.style.display = "none";
-        rules.style.display = "none";
-        reloadScreen.style.display = "inline"
+        playScreen.style.display = "none";
+        reloadScreen.style.display = "inline";
         return true;
     } else if (computerScore === 5) {
-        title.style.display = "none";
-        weapons.style.display = "none";
-        results.style.display = "none";
-        rules.style.display = "none";
+        playScreen.style.display = "none";
         reloadScreen.style.display = "inline"
         computerComment.innerHTML = "thank you for playing!"
         winnerTitle.innerHTML = "You lost!"

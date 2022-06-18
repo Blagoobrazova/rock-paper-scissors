@@ -87,6 +87,20 @@ body,
     font-size: 20px;
 }
 
+.computerSelection {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#compWeaponTitle {
+    font-size: 50px;
+}
+
+#compWeapon {
+    font-size: 40px;
+}
+
 #rules,
 .players {
     color: rgb(25, 133, 25)
