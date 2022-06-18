@@ -6,10 +6,6 @@ let intro = document.getElementById("intro");
 let nobtn = document.getElementById("refusePlaying");
 let yesbtn = document.getElementById("acceptGame");
 let playScreen = document.getElementById("playScreen");
-let title = document.getElementById("title");
-let weapons = document.getElementById("choiceContainer");
-let results = document.getElementById("resultsContainer");
-let rules = document.getElementById("rules");
 
 //intro
 function typeWriter(text,speed,char) {
