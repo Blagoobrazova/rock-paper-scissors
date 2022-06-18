@@ -18,7 +18,7 @@ This is my first JavaScript project. It was created as a part of «The Odin Proj
 
 ### The challenge
 
-Required (by TOP) features: 
+Required (by TOP) features:  
 Create three buttons, one for each selection (with an event listener) for the user;  
 Add computer play function that randomly return either Rock, Paper or Scissors;  
 Play 5 rounds;  
@@ -32,10 +32,10 @@ Blinking effect for the buttons (constant blink in some cases, in others after h
 
 ### Screenshots
 
-![intro](/Users/polina/repos/rock-paper-scissors/images/intro.png)
-![userRefuses](/Users/polina/repos/rock-paper-scissors/images/userRefused.png)
-![userLost]/Users/polina/repos/rock-paper-scissors/images/userlose.png)
-![userWon]/Users/polina/repos/rock-paper-scissors/images/userwin.png)
+![intro](/Users/polina/repos/rock-paper-scissors/images/intro.png)  
+![userRefuses](/Users/polina/repos/rock-paper-scissors/images/userRefused.png)  
+![userLost]/Users/polina/repos/rock-paper-scissors/images/userlose.png)  
+![userWon]/Users/polina/repos/rock-paper-scissors/images/userwin.png)  
 
 
 ### Links
