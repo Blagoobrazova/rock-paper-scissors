@@ -40,7 +40,7 @@ Blinking effect for the buttons (constant blink in some cases, in others after h
 
 ### Links
 
-- Live Site URL: 
+- Live Site URL: https://blagoobrazova.github.io/rock-paper-scissors/
 
 ## My process
 
